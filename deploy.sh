@@ -1,6 +1,7 @@
 #!/usr/bin/env sh
 
 npm run build
+git branch review-page
 
 cd dist
 
