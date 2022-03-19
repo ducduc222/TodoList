@@ -1,15 +1,15 @@
 <template>
   <div id="app">
-    <List />
+    <Home />
   </div>
 </template>
 
 <script>
-import List from './components/list-cpn.vue'
+import Home from './components/home-cpn.vue'
 export default {
   name: 'App',
   components: {
-    List
+    Home
   }
 }
 </script>
