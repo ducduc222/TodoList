@@ -9,5 +9,9 @@ export default {
 
   completeTask(state, index) {
     state.tasks[index].completed = !state.tasks[index].completed
-}
+  },
+
+  deleteTask(state, index) {
+    state.tasks.splice(index, 1)
+  }
 }

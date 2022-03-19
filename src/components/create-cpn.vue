@@ -30,23 +30,19 @@ export default {
       Task: {
           content:'',
           time:'',
-          date:''
+          date:'',
+          completed: false
         }
       
     }
   },
-
-  computed: {
-
-  },
-
   methods: {
     ...mapActions(['addTask']),
     createNewTask() {
       this.addTask({...this.Task}),
       this.Task = []
     }
-  },
+  }
 }
 </script>
 

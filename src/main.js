@@ -6,9 +6,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faUserSecret, faHouse, faHockeyPuck, faCheck , faCircleCheck} from '@fortawesome/free-solid-svg-icons'
+import { faUserSecret, faHouse, faHockeyPuck, faCheck , faCircleCheck, faTrashCan} from '@fortawesome/free-solid-svg-icons'
 
-library.add(faUserSecret, faHouse, faHockeyPuck, faCheck, faCircleCheck)
+library.add(faUserSecret, faHouse, faHockeyPuck, faCheck, faCircleCheck, faTrashCan)
 
 Vue.config.productionTip = false
 Vue.component('font-awesome-icon', FontAwesomeIcon)

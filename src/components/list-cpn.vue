@@ -8,43 +8,39 @@
           <th scope="col">Ngay</th>
         </tr>
       </thead>
-      <tbody>
-        <tr 
-        v-for="(task, index) in tasks"
-        :key="index"
-        :class="{completed: task.completed}"
-        >
-          <td>{{task.content}}</td>
-          <td>{{task.time}}</td>
-          <td>{{task.date}}</td>
-          <td><font-awesome-icon @click="completed(index)" icon="fa-solid fa-circle-check" /></td>
-        </tr>
-      </tbody>
     </table>
+    <Task 
+      v-for="(task, index) in tasks"
+      :key="index"
+      :task="task"
+      :index="index"
+    />
   </div>
 </template>
 
 <script>
 import { mapState, mapActions} from 'vuex'
+import Task from './task-cpn.vue'
 
 export default {
   mounted() {
     this.getTasks()
   },
 
+  components: {
+    Task
+  },
 
   computed: {
     ...mapState(['tasks'])
   },
 
   methods: {
-    ...mapActions(['getTasks', 'completed'])
+    ...mapActions(['getTasks'])
   },
 }
 </script>
 
 <style scoped>
-.completed {
-  background: greenyellow;
-}
+
 </style>

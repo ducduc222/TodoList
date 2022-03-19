@@ -1,4 +1,4 @@
-let tasks = [
+let taskss = [
   {
     content: "Viec lam", 'time':'00h00', date: '01/03/2022', completed: false
   },
@@ -15,14 +15,18 @@ let tasks = [
 
 export default {
   getTasks({commit}) {
-    commit('setTasks', tasks)
+    commit('setTasks', taskss)
   },
 
   addTask({commit}, task) {
     commit('addTask', task)
   },
 
-  completed({commit}, index) {
+  completeTask({commit}, index) {
     commit('completeTask', index)
+  },
+
+  deleteTask({commit}, index) {
+    commit('deleteTask', index)
   }
 }
