@@ -1,15 +1,15 @@
 let taskss = [
   {
-    content: "Viec lam", 'time':'00h00', date: '01/03/2022', completed: false
+    content: 'Viec lam', 'time':'00h00', date: '01/03/2022', completed: false
   },
   {
-    content: "Viec lam", 'time':'00h00', date: '01/03/2022', completed: true
+    content: 'Viec lam', 'time':'00h00', date: '01/03/2022', completed: true
   },
   {
-    content: "Viec lam", 'time':'00h00', date: '01/03/2022', completed: false
+    content: 'Viec lam', 'time':'00h00', date: '01/03/2022', completed: false
   },
   {
-    content: "Viec lam", 'time':'00h00', date: '01/03/2022', completed: false
+    content: 'Viec lam', 'time':'00h00', date: '01/03/2022', completed: false
   }
 ]
 

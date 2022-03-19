@@ -1,6 +1,6 @@
 <template>
 <div class="container">
-  <form @submit.prevent="createNewTask" >
+  <form @submit.prevent="addTask({...Task})" @submit="resetForm()">
     <table class="">
       <tbody>
         <tr>
@@ -24,7 +24,6 @@
 <script>
 import {mapActions} from 'vuex'
 export default {
-
   data() {
     return {
       Task: {
@@ -38,9 +37,10 @@ export default {
   },
   methods: {
     ...mapActions(['addTask']),
-    createNewTask() {
-      this.addTask({...this.Task}),
-      this.Task = []
+    resetForm() {
+      this.Task.content = '',
+      this.Task.time = '',
+      this.Task.date = ''
     }
   }
 }
@@ -50,4 +50,5 @@ export default {
 td {
   height: 20px;
 }
+
 </style>
