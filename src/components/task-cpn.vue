@@ -1,21 +1,17 @@
 <template>
-  <div>
-    <table>
-      <tbody>
-        <tr :class="{completed: task.completed}">
-          <td>{{task.content}}</td>
-          <td>{{task.time}}</td>
-          <td>{{task.date}}</td>
-        </tr>
-      </tbody>
-    </table>
-  <button class="btn btn-outline-success" @click="completeTask(index)" >
+  <div class="task">
+    <div :class="{completed: task.completed}" class="content">
+      <p>{{task.content}}</p>
+      <p>{{task.time}}</p>
+      <p>{{task.date}}</p>
+    </div>
+    <button class="btn btn-outline-success" @click="completeTask(index)" >
       <font-awesome-icon icon="fa-solid fa-circle-check" />
-  </button>
+    </button>
 
-  <button class="btn btn-outline-success" @click="deleteTask(index)">
-    <font-awesome-icon icon="fa-solid fa-trash-can" />
-  </button>
+    <button class="btn btn-outline-success" @click="deleteTask(index)">
+      <font-awesome-icon icon="fa-solid fa-trash-can" />
+    </button>
   </div>
 </template>
 
@@ -33,11 +29,25 @@ export default {
 </script>
 
 <style scoped>
+
+div.task {
+  width: 100%;
+}
+div.content {
+  width: 80%;
+  display: inline-block;
+}
+p {
+  display: inline-block;
+  width: calc(100%/3);
+  text-align: center;
+  padding: auto;
+}
 button {
   margin-right: 10px;
 }
-
 .completed {
   background: greenyellow;
 }
+
 </style>

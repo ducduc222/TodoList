@@ -1,11 +1,11 @@
 <template>
   <div class="container">
-    <table class="table">
+    <table >
       <thead>
         <tr>
-          <th scope="col">Viec lam</th>
-          <th scope="col">Thoi gian</th>
-          <th scope="col">Ngay</th>
+          <th>Viec lam</th>
+          <th>Thoi gian</th>
+          <th>Ngay</th>
         </tr>
       </thead>
     </table>
@@ -15,6 +15,8 @@
       :task="task"
       :index="index"
     />
+  <router-link :to="{name:'Create'}"><button class="btn btn-outline-success"><font-awesome-icon icon="fa-solid fa-circle-plus" /></button></router-link>
+  <router-view></router-view>
   </div>
 </template>
 
@@ -42,5 +44,11 @@ export default {
 </script>
 
 <style scoped>
-
+  table {
+    width: 80%;
+    text-align: center;
+  }
+  th {
+    width: calc(100%/3);
+  }
 </style>
